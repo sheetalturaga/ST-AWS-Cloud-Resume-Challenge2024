@@ -1,4 +1,4 @@
-# Sheetal Turaga-Cloud-Resume-Challenge 2024
+# Sheetal Turaga-AWS-Cloud-Resume-Challenge 2024
 
 I found the Cloud Resume Challenge when I was looking for projects that I could build to get hands-on practice of all the cloud concepts and AWS tools that I had learnt about during my preparation for the AWS Cloud Practitioner Certification. I passed my certification just a couple of days before I started the implementation of this challenge.
 
