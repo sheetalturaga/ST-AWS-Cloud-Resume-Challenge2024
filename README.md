@@ -9,7 +9,11 @@ It involves of about 16 steps to complete the challenge. My status so far is as 
 - Certification ✅
 - HTML ✅
 - CSS ✅
-- Static Website: Deploying on to AWS S3 static website
+- Static Website: ✅
+  - Deploying a static website on to AWS S3 using Github Actions to push changes automatically
+  - Created S3 Bucket and enabled Static hosting on S3
+  - Created IAM user to generate Access key and Secret Access Key to link the repo. Updated the Github Actions with ID and keys for easy access
+  - Setup github workflows with main.yml that is the workflow code to trigger Github actions whenever you push on the main branch. This will be used to sync the project main folder to S3 bucket
 - HTTPS: Using AWS CloudFront to make sure S3 website URL uses HTTPS security
 - DNS: Custom DNS domain name to CF Distribution for access
 - JavaScript: Include a visitor counter
