@@ -1,23 +1,29 @@
+# Creating a workflow in Github Actions that gets triggered when
+# I push on the main branch.
+
+# Once triggered checkout the branch, then configures AWS creditials
+# to use AWS CLI access ID and secret and syncs public folder to S3 bucket
+
 name: Cloud Resume Challenge Website
 
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@main
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@main
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-1
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@main
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
 
-    - name: Deploy static site to S3 bucket
-      run: aws s3 sync /Users/sheetalturaga/CloudResumeChallenge/ s3://st-resume.com --delete
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./Users/sheetalturaga/CloudResumeChallenge/ s3://st-resume.com --delete
