@@ -26,4 +26,4 @@ jobs:
           aws-region: us-west-1
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./CloudResumeChallenge/ s3://st-resume.com --delete
+        run: aws s3 sync /Users/sheetalturaga/CloudResumeChallenge s3://st-resume.com
